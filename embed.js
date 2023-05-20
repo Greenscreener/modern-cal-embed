@@ -116,7 +116,7 @@ function eventDetails(event) {
 	eDetails.appendChild(whenLabel);
 	eDetails.appendChild(when);
 
-	if (event.location != '') {
+	if (event.location != '' && event.location != null) {
 		eDetails.appendChild(document.createElement('br'));
 		let whereLabel = document.createElement('strong');
 		whereLabel.appendChild(document.createTextNode('Where: '));
@@ -134,7 +134,7 @@ function eventDetails(event) {
 		eDetails.appendChild(where);
 	}
 
-	if (event.description != '') {
+	if (event.description != ''  && event.description != null) {
 		eDetails.appendChild(document.createElement('br'));
 		let descLabel = document.createElement('strong');
 		descLabel.appendChild(document.createTextNode('Description: '));
